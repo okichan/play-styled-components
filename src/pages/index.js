@@ -10,18 +10,19 @@ import linked from "../assets/linkedin.svg";
 export default () => (
   <S.Container>
     <S.Top>
-      <svg viewBox="0 0 500 500" preserveAspectRatio="xMidYMin slice">
-        <path id="curve" fill="transparent" d="M73.2,148.6c4-6.1,65.5-96.8,178.6-95.6c111.3,1.2,170.8,90.3,175.1,97" />
-        <text>
-          <textPath xlinkHref="#curve">&nbsp;&nbsp;&nbsp;TOMOMI</textPath>
-        </text>
-      </svg>
-      <S.Oki>Oki</S.Oki>
-      <S.SubTitle>a junior web developer</S.SubTitle>
-
-      <figure>
-        <S.Divider src={divider} />
-      </figure>
+      <div className="center">
+        <svg viewBox="0 0 500 500" preserveAspectRatio="xMidYMin slice">
+          <path id="curve" fill="transparent" d="M73.2,148.6c4-6.1,65.5-96.8,178.6-95.6c111.3,1.2,170.8,90.3,175.1,97" />
+          <text>
+            <textPath xlinkHref="#curve">&nbsp;&nbsp;&nbsp;TOMOMI</textPath>
+          </text>
+        </svg>
+        <S.Oki>Oki</S.Oki>
+        <S.SubTitle>a junior web developer</S.SubTitle>
+        <figure>
+          <S.Divider src={divider} />
+        </figure>
+      </div>
     </S.Top>
 
     <S.Greeting>
@@ -53,7 +54,7 @@ export default () => (
       &copy;{`${new Date().getFullYear()} `}
       Tomomi Oki, coded with
       <S.Love />
-      , React, Gatsby.js and Styled Component.
+      , React, Gatsby.js and Styled Components.
     </S.Footer>
   </S.Container>
 );

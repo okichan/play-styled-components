@@ -2,14 +2,14 @@ import styled from "styled-components";
 import paper from "./paper.png";
 
 export const Container = styled.body`
-  padding-top: 5vh;
+  // padding-top: 5vh;
   background: #fffcf5;
   color: #666;
 `;
 
 export const Top = styled.div`
   position: relative;
-  height: 95vh;
+  height: 100vh;
   width: 100%;
 `;
 
@@ -30,19 +30,18 @@ export const SubTitle = styled.p`
   text-align: center;
   font-size: 3vw;
   // border: 1px solid red;
-  padding-top: 40px;
+  padding: 2vh 0;
 `;
 
 export const Divider = styled.img`
   min-width: 200px;
   max-width: 80%;
-  margin: 6vw 0;
 `;
 
 export const Greeting = styled.div`
   font-family: Cardo;
   font-size: 1.2rem;
-  margin: 0 auto;
+  margin: 3vh auto;
   padding: 2rem;
   box-sizing: border-box;
   background: url(${paper}), #f0ece4;
@@ -70,17 +69,20 @@ export const Title = styled.h1`
   margin: 10vh auto;
   font-weight: normal;
   font-family: Italiana
-  font-size: 82px;
+  font-size: 8vw;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   text-transform: uppercase
 `;
 
 export const Footer = styled.div`
   font-family: Cardo, serif;
+  // white-space: nowrap;
+  // white-space: pre;
+  
   color: #F2F2F2;
   line-height: 4;
   text-align: right;
-  padding: 0 2rem;
+  padding: 0 2vw;
   background: #a8b4b5;
 `;
 
