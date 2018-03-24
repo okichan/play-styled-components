@@ -26,7 +26,6 @@ export default () => (
       </div>
     </S.Top>
 
-    <S.Box>YAY</S.Box>
     <S.Greeting>
       <p className="bold hello">Hello there.</p>
       <p className="p-1">
@@ -53,10 +52,13 @@ export default () => (
     <S.Footer>
       <S.Social src={git} />
       <S.Social src={linked} />
+      <span>
+
       &copy;{`${new Date().getFullYear()} `}
       Tomomi Oki, coded with
       <S.Love />
       , React, Gatsby.js and Styled Components.
+      </span>
     </S.Footer>
   </S.Container>
 );

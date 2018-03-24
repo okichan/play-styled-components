@@ -4,15 +4,15 @@ import paper from "./paper.png";
 const media = {
   tablet: (...args) => css`
     @media (min-width: 768px) {
-      ${ css(...args) }
+      ${css(...args)};
     }
   `,
   desktop: (...args) => css`
     @media (min-width: 992px) {
-      ${ css(...args) }
+      ${css(...args)};
     }
-  `,
-}
+  `
+};
 
 export const Container = styled.body`
   background: #fffcf5;
@@ -40,9 +40,11 @@ export const Oki = styled.div`
 export const SubTitle = styled.p`
   font-family: Cardo;
   text-align: center;
-  font-size: 3vw;
-  // border: 1px solid red;
+  font-size: 16px;
   padding: 2vh 0;
+  ${media.tablet`
+  font-size: 2.5vw;
+`};
 `;
 
 export const Divider = styled.img`
@@ -88,38 +90,49 @@ export const Title = styled.h1`
 
 export const Footer = styled.div`
   font-family: Cardo, serif;
-  // white-space: nowrap;
-  // white-space: pre;
-  
-  color: #F2F2F2;
-  line-height: 4;
+  color: #f2f2f2;
   text-align: right;
   padding: 0 2vw;
   background: #a8b4b5;
+  
+  span {
+    visibility: hidden;
+  }
+  
+  ${media.tablet`
+  line-height: 4;
+  
+  span {
+    visibility: visible;
+  } 
+`};
 `;
 
 export const Social = styled.img`
-  // position: absolute;
   float: left;
+  height: 22px;
+  width: 22px;
+  margin-right: 10px;
+  transform: translateY(10px);
+  top: 50%;
+
+  ${media.tablet`
   height: 44px;
   width: 44px;
   margin-right: 15px;
-  transform: translateY(10px);
-  top: 50%;
+`};
 `;
 
 export const Love = styled.span`
   color: orangered;
 
   &:before {
-    content: ' ♥';
+    content: " ♥";
   }
 `;
 
-
-
 export const Box = styled.div`
-  ${ media.tablet`
+  ${media.tablet`
     color: skyblue;
-  ` }
+  `};
 `;
