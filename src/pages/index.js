@@ -7,6 +7,7 @@ import Typography from "typography";
 import git from "../assets/github.svg";
 import linked from "../assets/linkedin.svg";
 
+
 export default () => (
   <S.Container>
     <S.Top>
@@ -25,6 +26,7 @@ export default () => (
       </div>
     </S.Top>
 
+    <S.Box>YAY</S.Box>
     <S.Greeting>
       <p className="bold hello">Hello there.</p>
       <p className="p-1">

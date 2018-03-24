@@ -1,8 +1,20 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import paper from "./paper.png";
 
+const media = {
+  tablet: (...args) => css`
+    @media (min-width: 768px) {
+      ${ css(...args) }
+    }
+  `,
+  desktop: (...args) => css`
+    @media (min-width: 992px) {
+      ${ css(...args) }
+    }
+  `,
+}
+
 export const Container = styled.body`
-  // padding-top: 5vh;
   background: #fffcf5;
   color: #666;
 `;
@@ -102,5 +114,12 @@ export const Love = styled.span`
   &:before {
     content: ' ♥';
   }
-  
+`;
+
+
+
+export const Box = styled.div`
+  ${ media.tablet`
+    color: skyblue;
+  ` }
 `;
