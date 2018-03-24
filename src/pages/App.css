@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Voltaire');
+
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+text {
+  font-size: 4rem;
+  letter-spacing: 15px;
+  padding-left: 2rem;
+  font-family: Voltaire, sans-serif;
+  fill: #666;
+}
+
+.svg-container {
+  border: 1px solid red;
+  height: 300px;
+  width: 100vw;
+}
+
+svg {
+  width: 100%;
+}
