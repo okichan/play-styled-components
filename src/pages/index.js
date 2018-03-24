@@ -4,6 +4,8 @@ import "./App.css";
 import divider from "../assets/divider.png";
 import * as S from "../assets/styles";
 import Typography from "typography";
+import git from "../assets/github.svg";
+import linked from "../assets/linkedin.svg";
 
 export default () => (
   <S.Container>
@@ -46,8 +48,12 @@ export default () => (
     <S.Title>FAVOURITE</S.Title>
 
     <S.Footer>
-      {`${new Date().getFullYear()} `}
-      Tomomi Oki, created with such and such
+      <S.Social src={git} />
+      <S.Social src={linked} />
+      &copy;{`${new Date().getFullYear()} `}
+      Tomomi Oki, coded with
+      <S.Love />
+      , React, Gatsby.js and Styled Component.
     </S.Footer>
   </S.Container>
 );

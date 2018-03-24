@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import paper from "../assets/paper.png";
+import paper from "./paper.png";
 
 export const Container = styled.body`
   padding-top: 5vh;
@@ -58,15 +58,14 @@ export const Greeting = styled.div`
   -ms-grid-columns: auto 4vw auto;
   -ms-grid-template-rows: auto auto auto;
 
-
   & > p {
     margin: 10px 0;
     // border: 1px solid red
     // box-sizing: border-box
   }
-  `;
-  
-  export const Title = styled.h1`
+`;
+
+export const Title = styled.h1`
   width: 80vw;
   margin: 10vh auto;
   font-weight: normal;
@@ -76,13 +75,30 @@ export const Greeting = styled.div`
   text-transform: uppercase
 `;
 
-  export const Footer = styled.div`
-  // height: 60px;
+export const Footer = styled.div`
   font-family: Cardo, serif;
+  color: #F2F2F2;
   line-height: 4;
   text-align: right;
-  padding-right: 1rem;
-  background: #A8B4B5
+  padding: 0 2rem;
+  background: #a8b4b5;
 `;
 
+export const Social = styled.img`
+  // position: absolute;
+  float: left;
+  height: 44px;
+  width: 44px;
+  margin-right: 15px;
+  transform: translateY(10px);
+  top: 50%;
+`;
 
+export const Love = styled.span`
+  color: orangered;
+
+  &:before {
+    content: ' ♥';
+  }
+  
+`;
