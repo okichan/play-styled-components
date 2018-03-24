@@ -48,16 +48,41 @@ export const Greeting = styled.div`
   background: url(${paper}), #f0ece4;
   background-size: 80px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  display: -ms-grid;
+  width: 80%;
+
   display: grid;
   grid-template-columns: auto 4vw auto;
   grid-template-rows: repeat(3, auto);
 
-  width: 80%;
+  display: -ms-grid;
+  -ms-grid-columns: auto 4vw auto;
+  -ms-grid-template-rows: auto auto auto;
+
 
   & > p {
     margin: 10px 0;
-    border: 1px solid red
-    box-sizing: border-box
+    // border: 1px solid red
+    // box-sizing: border-box
   }
+  `;
+  
+  export const Title = styled.h1`
+  width: 80vw;
+  margin: 10vh auto;
+  font-weight: normal;
+  font-family: Italiana
+  font-size: 82px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-transform: uppercase
 `;
+
+  export const Footer = styled.div`
+  // height: 60px;
+  font-family: Cardo, serif;
+  line-height: 4;
+  text-align: right;
+  padding-right: 1rem;
+  background: #A8B4B5
+`;
+
+

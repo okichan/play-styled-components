@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Voltaire');
 @import url('https://fonts.googleapis.com/css?family=Pinyon+Script');
 @import url('https://fonts.googleapis.com/css?family=Cardo');
+@import url('https://fonts.googleapis.com/css?family=Italiana');
 
 body {
   margin: 0;
@@ -29,13 +30,17 @@ figure {
 }
 
 .hello {
-  grid-column-start: 1;
-  grid-column-end: 4;
+  grid-column: 1 / 4;
+  -ms-grid-column-span: 2;
+  -ms-grid-row-span: 1;
+  /* -ms-grid-column-end: 4; */
 }
 
 .p-1 {
   grid-column-start: 1;
   grid-column-end: 2;
+  -ms-grid-row: 1 / 1;
+  -ms-grid-column: 2 / 3
 }
 
 .p-2 {
@@ -53,3 +58,6 @@ figure {
   /* grid-column-end: 2; */
 }
 
+.clip-test {
+  clip-path: circle(40%);
+}

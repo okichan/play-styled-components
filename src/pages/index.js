@@ -39,5 +39,15 @@ export default () => (
       </p>
       <p>glijae</p>
     </S.Greeting>
+
+    <S.Title>WORKS</S.Title>
+    <div />
+
+    <S.Title>FAVOURITE</S.Title>
+
+    <S.Footer>
+      {`${new Date().getFullYear()} `}
+      Tomomi Oki, created with such and such
+    </S.Footer>
   </S.Container>
 );
