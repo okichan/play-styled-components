@@ -6,7 +6,12 @@ import * as S from "../assets/styles";
 import Typography from "typography";
 import git from "../assets/github.svg";
 import linked from "../assets/linkedin.svg";
-import tanto from "../assets/tanto.png"
+import tanto from "../assets/tanto.png";
+import port from "../assets/port.png";
+import zodiac from "../assets/zodiac.png";
+import wordsworth from "../assets/wordsworth.png";
+import mycookbook from "../assets/mycookbook.png";
+import radiohead from "../assets/radiohead.png";
 
 export default () => (
   <S.Container>
@@ -43,15 +48,27 @@ export default () => (
       </p>
       <p>glijae</p>
     </S.Greeting>
-    
+
     <S.Title>WORKS</S.Title>
     <S.WorksContainer>
-      <S.WorkItem href="test" id="bg-t"><img src={tanto} /><span>Tanto</span></S.WorkItem>
-      <S.WorkItem href="test" id="bg-p"><span>Portfolio</span></S.WorkItem>
-      <S.WorkItem href="test" id="bg-z"><span>Zodiac Redifined</span></S.WorkItem>
-      <S.WorkItem href="test" id="bg-w"><span>Wordsworth</span></S.WorkItem>
-      <S.WorkItem href="test" id="bg-m"><span>My Cookbook</span></S.WorkItem>
-      <S.WorkItem href="test" id="bg-r"><span>Radiohead fansite</span></S.WorkItem>
+      <S.WorkItem href="https://mct-project-t3-demo.netlify.com" target="_blank" rel="noopener noreferrer">
+        <img src={tanto} /> <span>Tanto</span>
+      </S.WorkItem>
+      <S.WorkItem href="https://tomomioki.netlify.com" target="_blank" rel="noopener noreferrer">
+        <img src={port} /> <span>Portfolio</span>
+      </S.WorkItem>
+      <S.WorkItem href="https://zodiac-redefined.netlify.com" target="_blank" rel="noopener noreferrer">
+        <img src={zodiac} /> <span>Zodiac Redifined</span>
+      </S.WorkItem>
+      <S.WorkItem href="https://wordsworth.herokuapp.com" target="_blank" rel="noopener noreferrer">
+        <img src={wordsworth} /> <span>Wordsworth</span>
+      </S.WorkItem>
+      <S.WorkItem href="https://radiant-beach-49950.herokuapp.com/" target="_blank" rel="noopener noreferrer">
+        <img src={mycookbook} /> <span>My Cookbook</span>
+      </S.WorkItem>
+      <S.WorkItem href="https://secretary-answers-11183.netlify.com" target="_blank" rel="noopener noreferrer">
+        <img src={radiohead} /> <span>Radiohead fansite</span>
+      </S.WorkItem>
     </S.WorksContainer>
 
     <S.Title>FAVOURITE</S.Title>

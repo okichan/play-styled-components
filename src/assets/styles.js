@@ -73,8 +73,6 @@ export const Greeting = styled.div`
 
   & > p {
     margin: 10px 0;
-    // border: 1px solid red
-    // box-sizing: border-box
   }
 `;
 
@@ -93,7 +91,6 @@ export const Title = styled.h1`
 
 export const WorksContainer = styled.div`
   width: 80vw;
-  border: 1px solid red;
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -119,14 +116,14 @@ export const WorkItem = styled.a`
   box-shadow: none;
   border-radius: 50%;
   overflow: hidden;
-  transition: all 0.3s;
+  transition: all 0.5s;
   
   img {
-    position: absolute;
-    width: 120%;
-    // filter: blur(3px);
-    filter: brightness(0.50) contrast(40%);
-    transition: all 0.3s;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5) grayscale(100%) contrast(20%);
+    transition: all 0.5s;
   }
   
   span {
@@ -139,7 +136,7 @@ export const WorkItem = styled.a`
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    transition: all 0.3s;
+    transition: all 0.5s;
   }
   
   &:hover {
