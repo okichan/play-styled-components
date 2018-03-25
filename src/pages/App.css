@@ -1,11 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Voltaire');
-@import url('https://fonts.googleapis.com/css?family=Pinyon+Script');
-@import url('https://fonts.googleapis.com/css?family=Cardo');
-@import url('https://fonts.googleapis.com/css?family=Italiana');
+@import url('https://fonts.googleapis.com/css?family=Voltaire|Pinyon+Script|Cardo|Italiana|Poiret+One');
 
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 text {

@@ -6,7 +6,7 @@ import * as S from "../assets/styles";
 import Typography from "typography";
 import git from "../assets/github.svg";
 import linked from "../assets/linkedin.svg";
-
+import tanto from "../assets/tanto.png"
 
 export default () => (
   <S.Container>
@@ -19,7 +19,7 @@ export default () => (
           </text>
         </svg>
         <S.Oki>Oki</S.Oki>
-        <S.SubTitle>a junior web developer</S.SubTitle>
+        <S.SubTitle>a web developer</S.SubTitle>
         <figure>
           <S.Divider src={divider} />
         </figure>
@@ -43,9 +43,16 @@ export default () => (
       </p>
       <p>glijae</p>
     </S.Greeting>
-
+    
     <S.Title>WORKS</S.Title>
-    <div />
+    <S.WorksContainer>
+      <S.WorkItem href="test" id="bg-t"><img src={tanto} /><span>Tanto</span></S.WorkItem>
+      <S.WorkItem href="test" id="bg-p"><span>Portfolio</span></S.WorkItem>
+      <S.WorkItem href="test" id="bg-z"><span>Zodiac Redifined</span></S.WorkItem>
+      <S.WorkItem href="test" id="bg-w"><span>Wordsworth</span></S.WorkItem>
+      <S.WorkItem href="test" id="bg-m"><span>My Cookbook</span></S.WorkItem>
+      <S.WorkItem href="test" id="bg-r"><span>Radiohead fansite</span></S.WorkItem>
+    </S.WorksContainer>
 
     <S.Title>FAVOURITE</S.Title>
 
@@ -53,11 +60,10 @@ export default () => (
       <S.Social src={git} />
       <S.Social src={linked} />
       <span>
-
-      &copy;{`${new Date().getFullYear()} `}
-      Tomomi Oki, coded with
-      <S.Love />
-      , React, Gatsby.js and Styled Components.
+        &copy;{`${new Date().getFullYear()} `}
+        Tomomi Oki, coded with
+        <S.Love />
+        , React, Gatsby.js and Styled Components.
       </span>
     </S.Footer>
   </S.Container>
