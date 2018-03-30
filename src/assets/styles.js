@@ -56,25 +56,56 @@ export const Greeting = styled.div`
   font-family: Cardo;
   font-size: 1.2rem;
   margin: 3vh auto;
-  padding: 2rem;
+  padding: 0.4rem;
   box-sizing: border-box;
   background: url(${paper}), #f0ece4;
   background-size: 80px;
   box-shadow: 10px 7px 5px rgba(0, 0, 0, 0.25);
   width: 80%;
-
-  display: grid;
-  grid-template-columns: auto 4vw auto;
-  grid-template-rows: repeat(3, auto);
-
-  display: -ms-grid;
-  -ms-grid-columns: auto 4vw auto;
-  -ms-grid-template-rows: auto auto auto;
-
-  & > p {
-    margin: 10px 0;
+  
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+  p {
+    width: 100%;
+    margin: 5px;
   }
-`;
+  
+  ${media.tablet`
+  padding: 2rem;
+  .hello {
+    width: 100%;
+    }
+
+    p {
+      width:47%;
+    }
+  `};
+  `;
+  
+  export const CircleWrapper = styled.div`
+  height: 30px;
+  width: auto;
+  margin: 10px 5px;
+
+  a {
+    margin-right: 10px;
+    display: inline-block;
+    height: 70%;
+  }
+  
+  ${media.tablet`
+  position: absolute;
+  bottom: 1.7em;
+  height: 30px;
+  
+  a {
+    height: 100%;
+    }
+  `};
+`
 
 export const Title = styled.h1`
   width: 80vw;

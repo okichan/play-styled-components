@@ -4,14 +4,15 @@ import "./App.css";
 import divider from "../assets/divider.png";
 import * as S from "../assets/styles";
 import Typography from "typography";
-import git from "../assets/github.svg";
-import linked from "../assets/linkedin.svg";
 import tanto from "../assets/tanto.png";
 import port from "../assets/port.png";
 import zodiac from "../assets/zodiac.png";
 import wordsworth from "../assets/wordsworth.png";
 import mycookbook from "../assets/mycookbook.png";
 import radiohead from "../assets/radiohead.png";
+import { svgs } from "../assets/Svgs";
+
+const circles = [svgs.circle, svgs.circle, svgs.circle];
 
 export default () => (
   <S.Container>
@@ -46,7 +47,22 @@ export default () => (
         In the more distant past, I grew up in Japan and that's what makes me "me" now, although quite frequently it's mixed with
         the quirky culture of Melbourne (north)!
       </p>
-      <p>glijae</p>
+
+      <S.CircleWrapper>
+        {circles.map((circle, i) => {
+          setTimeout(() => {
+            document.getElementsByTagName("svg")[1].setAttribute("id", "circle1");
+            document.getElementsByTagName("svg")[2].setAttribute("id", "circle2");
+            document.getElementsByTagName("svg")[3].setAttribute("id", "circle3");
+          }, 1000);
+
+          if (i === 0) {
+            return <a href="cv">{circle()}</a>;
+          } else if (i === 1) {
+            return <a href="pdf">{circle()}</a>;
+          } else return <a href="">{circle()}</a>;
+        })}
+      </S.CircleWrapper>
     </S.Greeting>
 
     <S.Title>WORKS</S.Title>
@@ -74,8 +90,8 @@ export default () => (
     <S.Title>FAVOURITE</S.Title>
 
     <S.Footer>
-      <S.Social src={git} />
-      <S.Social src={linked} />
+      <S.Social src={svgs.github()} />
+      <S.Social src={svgs.linkedin()} />
       <span>
         &copy;{`${new Date().getFullYear()} `}
         Tomomi Oki, coded with

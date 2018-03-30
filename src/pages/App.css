@@ -52,3 +52,17 @@ figure {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%); }
+
+.circle {
+  display: inline-block;
+  width: auto;
+  height: 100%; }
+
+#circle1 path {
+  fill: #D9ABA0; }
+
+#circle2 path {
+  fill: #F7DEB7; }
+
+#circle3 path {
+  fill: #ABCCB9; }
