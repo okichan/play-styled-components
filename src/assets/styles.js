@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import paper from "./paper.png";
+import polygon from "./polygon.svg";
 
 const media = {
   tablet: (...args) => css`
@@ -56,12 +57,12 @@ export const Greeting = styled.div`
   font-family: Cardo;
   font-size: 1.2rem;
   margin: 3vh auto;
-  padding: 0.4rem;
+  padding: 2rem;
   box-sizing: border-box;
   background: url(${paper}), #f0ece4;
   background-size: 80px;
   box-shadow: 10px 7px 5px rgba(0, 0, 0, 0.25);
-  width: 80%;
+  width: 95%;
   
   position: relative;
   display: flex;
@@ -70,36 +71,43 @@ export const Greeting = styled.div`
   
   p {
     width: 100%;
-    margin: 5px;
+    margin: 8px 5px;
   }
   
   ${media.tablet`
-  padding: 2rem;
+  width: 80%;
+  
   .hello {
     width: 100%;
     }
 
-    p {
-      width:47%;
-    }
+  p {
+    width:47%;
+  }
   `};
   `;
   
   export const CircleWrapper = styled.div`
   height: 30px;
   width: auto;
-  margin: 10px 5px;
+  margin: 20px 5px 0px;
 
   a {
-    margin-right: 10px;
-    display: inline-block;
-    height: 70%;
+    display: inline;
   }
   
+  .circle {
+    margin-right: 20px;
+    display: inline-block;
+    width: 30px;
+    height: 100%;
+  }
+
   ${media.tablet`
   position: absolute;
-  bottom: 1.7em;
-  height: 30px;
+  width: 30vw;
+  bottom: 2rem;
+  left: 2rem;
   
   a {
     height: 100%;
@@ -198,9 +206,15 @@ export const WorkItem = styled.a`
 
 export const WorkDesc = styled.p`
   font-family: "Poiret One";
-  // font-size: 8vw;
-  // text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  // text-transform: uppercase
+`;
+
+export const FavContainer = styled.div`
+  // border: 1px solid red;
+  margin: 0 auto 2rem;
+  width: 80%;
+  height: 70vh;
+  background: url(${polygon}) no-repeat;
+  background-size: 100% 100%;
 `;
 
 export const Footer = styled.div`

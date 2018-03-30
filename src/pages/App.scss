@@ -27,48 +27,12 @@ figure {
   font-weight: bold;
 }
 
-.hello {
-  grid-column: 1 / 4;
-  -ms-grid-column-span: 2;
-  -ms-grid-row-span: 1;
-  /* -ms-grid-column-end: 4; */
-}
-
-.p-1 {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  -ms-grid-row: 1 / 1;
-  -ms-grid-column: 2 / 3;
-}
-
-.p-2 {
-  grid-column-start: 3;
-  /* grid-column-end: 2; */
-}
-
-.p-3 {
-  grid-column-start: 1;
-  grid-column-end: 2;
-}
-
-.p-4 {
-  grid-column-start: 3;
-  /* grid-column-end: 2; */
-}
-
 .center {
   width: 100%;
-  /* border: 1px solid red; */
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-}
-
-.circle {
-  display: inline-block;
-  width: auto;
-  height: 100%;
 }
 
 #circle1 {

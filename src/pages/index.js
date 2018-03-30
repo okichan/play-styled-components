@@ -54,13 +54,26 @@ export default () => (
             document.getElementsByTagName("svg")[1].setAttribute("id", "circle1");
             document.getElementsByTagName("svg")[2].setAttribute("id", "circle2");
             document.getElementsByTagName("svg")[3].setAttribute("id", "circle3");
-          }, 1000);
+          }, 700);
 
           if (i === 0) {
-            return <a href="cv">{circle()}</a>;
+            return (
+              <a href="cv" title="Get CV (word)">
+                {circle}
+              </a>
+            );
           } else if (i === 1) {
-            return <a href="pdf">{circle()}</a>;
-          } else return <a href="">{circle()}</a>;
+            return (
+              <a href="pdf" title="Get CV (pdf)">
+                {circle}
+              </a>
+            );
+          } else
+            return (
+              <a href="https://github.com/okichan" title="Go to Github">
+                {circle}
+              </a>
+            );
         })}
       </S.CircleWrapper>
     </S.Greeting>
@@ -87,11 +100,19 @@ export default () => (
       </S.WorkItem>
     </S.WorksContainer>
 
-    <S.Title>FAVOURITE</S.Title>
+    <S.Title>FAVOURITES</S.Title>
+      <S.FavContainer>
+        <ul>
+          <li></li>
+          <li></li>
+        </ul>
+        </S.FavContainer>    
 
     <S.Footer>
-      <S.Social src={svgs.github()} />
-      <S.Social src={svgs.linkedin()} />
+      {svgs.github}
+      {svgs.linkedin}
+      {/* <S.Social src={svgs.github} />
+      <S.Social src={svgs.linkedin} /> */}
       <span>
         &copy;{`${new Date().getFullYear()} `}
         Tomomi Oki, coded with
