@@ -137,14 +137,19 @@ export default () => (
         </S.FavContainer>    
 
     <S.Footer>
-      {svgs.github}
-      {svgs.linkedin}
-      <span>
+      <a href="https://github.com/okichan" >
+        {svgs.github}
+      </a>
+      <a href="https://www.linkedin.com/in/tomomi-oki-parsons/" >
+        {svgs.linkedin}
+      </a>
+      <p>
         &copy;{`${new Date().getFullYear()} `}
-        Tomomi Oki, coded with
+        Tomomi Oki, 
+        coded with
         <S.Love />
-        , React, Gatsby.js and Styled Components.
-      </span>
+        , <a href="https://reactjs.org/" >React</a>, <a href="https://www.gatsbyjs.org/">Gatsby</a> and <a href="https://www.styled-components.com/">Styled Components</a>.
+      </p>
     </S.Footer>
   </S.Container>
 );

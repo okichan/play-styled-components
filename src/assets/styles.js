@@ -249,32 +249,42 @@ export const Footer = styled.div`
   padding: 0 2vw;
   background: #a8b4b5;
 
-  span {
-    visibility: hidden;
+  p {
+    margin: 0;
+    padding: 4px 0;
+  }
+
+  a {
+    color: inherit;
+
+    &:hover {
+      text-decoration: none;
+    }
   }
 
   svg {
     float: left;
-    height: 30px;
-    width: 30px;
     margin-right: 10px;
     transform: translateY(10px);
-    top: 50%;
+    height: 30px;
+    width: 30px;
+    margin-right: 15px;
+    
+  }
   
-    ${media.tablet`
-      height: 44px;
-      width: 44px;
-      margin-right: 15px;
-    `};
+  ${media.tablet`
+    height: 64px;
+  svg {
+    height: 44px;
+    width: 44px;
   }
 
-  ${media.tablet`
-    line-height: 4;
-    
-    span {
-      visibility: visible;
-    } 
-`};
+  p {
+    padding: 20px 0;
+  }
+
+  `};
+
 `;
 
 export const Love = styled.span`
