@@ -3,13 +3,19 @@
   "description": "Gatsby hello world starter",
   "license": "MIT",
   "scripts": {
-    "start": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve"
+    "start-js": "gatsby develop",
+    "start": "npm-run-all -p watch-css start-js",
+    "build-js": "react-scripts build",
+    "build": "npm-run-all build-css build-js",
+    "serve": "gatsby serve",
+    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive"
   },
   "dependencies": {
     "gatsby": "^1.9.238",
     "gatsby-link": "^1.6.39",
+    "node-sass-chokidar": "^1.2.2",
+    "npm-run-all": "^4.1.2",
     "styled-components": "^3.2.3",
     "typography": "^0.16.6"
   }
