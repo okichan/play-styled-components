@@ -253,27 +253,27 @@ export const Footer = styled.div`
     visibility: hidden;
   }
 
-  ${media.tablet`
-  line-height: 4;
+  svg {
+    float: left;
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+    transform: translateY(10px);
+    top: 50%;
   
-  span {
-    visibility: visible;
-  } 
-`};
-`;
-
-export const Social = styled.img`
-  float: left;
-  height: 22px;
-  width: 22px;
-  margin-right: 10px;
-  transform: translateY(10px);
-  top: 50%;
+    ${media.tablet`
+      height: 44px;
+      width: 44px;
+      margin-right: 15px;
+    `};
+  }
 
   ${media.tablet`
-  height: 44px;
-  width: 44px;
-  margin-right: 15px;
+    line-height: 4;
+    
+    span {
+      visibility: visible;
+    } 
 `};
 `;
 

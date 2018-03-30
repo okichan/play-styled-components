@@ -15,6 +15,39 @@ import { svgs } from "../assets/Svgs";
 const circles = [svgs.circle, svgs.circle, svgs.circle];
 const favs = ["React", 'Angular (2+)', 'CSS', 'SASS', 'JavaScript', 'Mongo', 'Figma', 'GitHub', 'Jira', 'SVG', 'Netlify', 'Bootstrap', 'VSCode', 'Yarn', 'Refactoring', 'Typography', 'Karaoke', 'Bike Share', 'Vintage', 'Tea', 'Sushi', 'Xiaolongbao', 'Curry', 'Singapore', 'Chicago', 'Madrid', '80s music', '90s too'
 ]
+const projects = [
+  {
+  name: 'Tanto', 
+  url: "https://mct-project-t3-demo.netlify.com",
+  img: tanto
+}, 
+  {
+  name: 'Portfolio', 
+  url: "https://tomomioki.netlify.com",
+  img: port
+},
+  {
+  name: 'Zodiac Redifined', 
+  url: "https://zodiac-redefined.netlify.com",
+  img: zodiac
+},
+  {
+  name: 'Wordsworth', 
+  url: "https://wordsworth.herokuapp.com",
+  img: wordsworth
+},
+  {
+  name: 'My Cookbook', 
+  url: "https://radiant-beach-49950.herokuapp.com/",
+  img: mycookbook
+},
+  {
+  name: 'Radiohead fansite', 
+  url: "https://secretary-answers-11183.netlify.com",
+  img: radiohead
+},
+]
+
 export default () => (
   <S.Container>
     <S.Top>
@@ -79,26 +112,17 @@ export default () => (
       </S.CircleWrapper>
     </S.Greeting>
 
+
     <S.Title>WORKS</S.Title>
+
     <S.WorksContainer>
-      <S.WorkItem href="https://mct-project-t3-demo.netlify.com" target="_blank" rel="noopener noreferrer">
-        <img src={tanto} /> <span>Tanto</span>
-      </S.WorkItem>
-      <S.WorkItem href="https://tomomioki.netlify.com" target="_blank" rel="noopener noreferrer">
-        <img src={port} /> <span>Portfolio</span>
-      </S.WorkItem>
-      <S.WorkItem href="https://zodiac-redefined.netlify.com" target="_blank" rel="noopener noreferrer">
-        <img src={zodiac} /> <span>Zodiac Redifined</span>
-      </S.WorkItem>
-      <S.WorkItem href="https://wordsworth.herokuapp.com" target="_blank" rel="noopener noreferrer">
-        <img src={wordsworth} /> <span>Wordsworth</span>
-      </S.WorkItem>
-      <S.WorkItem href="https://radiant-beach-49950.herokuapp.com/" target="_blank" rel="noopener noreferrer">
-        <img src={mycookbook} /> <span>My Cookbook</span>
-      </S.WorkItem>
-      <S.WorkItem href="https://secretary-answers-11183.netlify.com" target="_blank" rel="noopener noreferrer">
-        <img src={radiohead} /> <span>Radiohead fansite</span>
-      </S.WorkItem>
+        {projects.map(project => {
+          return (
+          <S.WorkItem src={project.url} key={project.name}>
+            <img src={project.img} /><span>{ project.name }</span>
+          </S.WorkItem>
+          )
+        })}
     </S.WorksContainer>
 
     <S.Title>FAVOURITES</S.Title>
@@ -115,8 +139,6 @@ export default () => (
     <S.Footer>
       {svgs.github}
       {svgs.linkedin}
-      {/* <S.Social src={svgs.github} />
-      <S.Social src={svgs.linkedin} /> */}
       <span>
         &copy;{`${new Date().getFullYear()} `}
         Tomomi Oki, coded with
