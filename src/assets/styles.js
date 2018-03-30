@@ -209,12 +209,37 @@ export const WorkDesc = styled.p`
 `;
 
 export const FavContainer = styled.div`
-  // border: 1px solid red;
+  font-family: Cardo, sans-serif;
+  font-size: 1.2rem;
   margin: 0 auto 2rem;
+  box-sizing: border-box;
+  padding: 2rem;
   width: 80%;
-  height: 70vh;
+  height: auto;
   background: url(${polygon}) no-repeat;
   background-size: 100% 100%;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+    li {
+      margin: 10px 0;
+      width: 48%;
+    }
+    
+    ${media.tablet`
+    li {
+      width: 24%;
+      }  
+    
+    `};
+  }
+  
 `;
 
 export const Footer = styled.div`

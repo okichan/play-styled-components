@@ -13,7 +13,8 @@ import radiohead from "../assets/radiohead.png";
 import { svgs } from "../assets/Svgs";
 
 const circles = [svgs.circle, svgs.circle, svgs.circle];
-
+const favs = ["React", 'Angular (2+)', 'CSS', 'SASS', 'JavaScript', 'Mongo', 'Figma', 'GitHub', 'Jira', 'SVG', 'Netlify', 'Bootstrap', 'VSCode', 'Yarn', 'Refactoring', 'Typography', 'Karaoke', 'Bike Share', 'Vintage', 'Tea', 'Sushi', 'Xiaolongbao', 'Curry', 'Singapore', 'Chicago', 'Madrid', '80s music', '90s too'
+]
 export default () => (
   <S.Container>
     <S.Top>
@@ -103,8 +104,11 @@ export default () => (
     <S.Title>FAVOURITES</S.Title>
       <S.FavContainer>
         <ul>
-          <li></li>
-          <li></li>
+          {favs.map(f => {
+            return (
+              <li>{f}</li>
+            )
+          })}
         </ul>
         </S.FavContainer>    
 
