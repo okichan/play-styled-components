@@ -135,7 +135,7 @@ export const WorksContainer = styled.div`
   flex-wrap: wrap;
   justify-content: space-around;
   margin: 0 auto;
-  border: 1px solid red;
+  // border: 1px solid red;
   padding-bottom: 80px;
   
   a:hover + p {
@@ -144,7 +144,7 @@ export const WorksContainer = styled.div`
   
   ${media.tablet`
   width: 80vw;
-  padding-bottom: 50px;
+  padding-bottom: 70px;
   `};
 
   ${media.laptop`
@@ -154,7 +154,6 @@ export const WorksContainer = styled.div`
 
 export const WorkItem = styled.a`
   position: relative;
-  cursor: pointer;
   width: 35vw;
   height: 35vw;
   border: 1px solid #afc7b9;
@@ -213,14 +212,20 @@ export const WorkItem = styled.a`
 
 export const WorkDesc = styled.p`
   font-family: Cardo;
+  font-size: 0.9rem;
+  text-shadow: 1px 1px 3px rgba(97, 97, 97, 0.35);
   position: absolute;
   margin: 0;
   bottom: 0;
   width: 100%;
   text-align: center;
-  border: 1px solid lime;
+  // border: 1px solid lime;
   opacity: 0;
   transition: opacity 0.5s;
+  
+  ${media.tablet`
+    font-size: 1.1rem;
+  `};
 `;
 
 export const FavContainer = styled.div`
@@ -261,7 +266,7 @@ export const Footer = styled.div`
   font-family: Cardo, serif;
   color: #f2f2f2;
   text-align: right;
-  padding: 0 2vw;
+  padding: 0 1vw;
   background: #a8b4b5;
 
   p {
@@ -271,12 +276,14 @@ export const Footer = styled.div`
 
   a {
     color: inherit;
-
+    
     &:hover {
       text-decoration: none;
     }
-  }
 
+
+  }
+  
   svg {
     float: left;
     margin-right: 10px;
@@ -284,22 +291,36 @@ export const Footer = styled.div`
     height: 30px;
     width: 30px;
     margin-right: 15px;
+    transition: fill .4s ease;
     
+  }
+  
+  #git:hover {
+    path {
+      fill: #444444;
+    }
+  }
+  
+  #linked:hover {
+    circle {
+      fill: #0077B5
+    }
+    path {
+      fill: white;
+    }
   }
   
   ${media.tablet`
     height: 64px;
-  svg {
-    height: 44px;
-    width: 44px;
-  }
+    svg {
+      height: 44px;
+      width: 44px;
+    }
 
-  p {
-    padding: 20px 0;
-  }
-
+    p {
+      padding: 20px 0;
+    }
   `};
-
 `;
 
 export const Love = styled.span`

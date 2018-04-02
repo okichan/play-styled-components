@@ -49,42 +49,42 @@ const projects = [
     url: "https://mct-project-t3-demo.netlify.com",
     img: tanto,
     desc: "Sales management app for an existing shop in Melbourne. School group project.",
-    stack: "React / Node / Express / Mongo / Bootstrap",
+    stack: "React / Node / Express / Mongo / API / Bootstrap",
   },
   {
     name: "Portfolio",
     url: "https://tomomioki.netlify.com",
     img: port,
-    desc: "My portfolio web page. Re-purposed from school solo project.",
+    desc: "My old portfolio. School solo project.",
     stack: "React / Node / SCSS / SVG",
   },
   {
     name: "Zodiac Redifined",
     url: "https://zodiac-redefined.netlify.com",
     img: zodiac,
-    desc: "A rather silly hobby page to practise REST API and CSS animation.",
-    stack: "React / Node / Express / Mongo / Bootstrap",
+    desc: "Toy app that tells your personality by entering your birth year.",
+    stack: "React / Node / Express / Rest API / SCSS",
   },
   {
     name: "Wordsworth",
     url: "https://wordsworth.herokuapp.com",
     img: wordsworth,
-    desc: "Sales management app for an existing shop in Melbourne. School group project.",
-    stack: "React / Node / Express / Mongo / Bootstrap",
+    desc: "An Airtasker-like translation portal. School solo project.",
+    stack: "Ruby on Rails / Bootstrap",
   },
   {
     name: "My Cookbook",
     url: "https://radiant-beach-49950.herokuapp.com/",
     img: mycookbook,
-    desc: "Sales management app for an existing shop in Melbourne. School group project.",
-    stack: "React / Node / Express / Mongo / Bootstrap",
+    desc: "Hackathon group project (to log in enter test@test.com pw: 123123).",
+    stack: "Ruby on Rails / Bootstrap",
   },
   {
     name: "Radiohead fansite",
     url: "https://secretary-answers-11183.netlify.com",
     img: radiohead,
     desc: "Sales management app for an existing shop in Melbourne. School group project.",
-    stack: "React / Node / Express / Mongo / Bootstrap",
+    stack: "HTML / CSS",
   }
 ];
 
@@ -99,7 +99,7 @@ export default () => (
           </text>
         </svg>
         <S.Oki>Oki</S.Oki>
-        <S.SubTitle>a web developer</S.SubTitle>
+        <S.SubTitle>web developer</S.SubTitle>
         <figure>
           <S.Divider src={divider} />
         </figure>
@@ -157,8 +157,8 @@ export default () => (
     <S.WorksContainer>
       {projects.map(project => {
         return (
-          <Fragment>
-            <S.WorkItem src={project.url} key={project.name}>
+          <Fragment key={project.name}>
+            <S.WorkItem href={project.url} key={project.name} target="_blank">
               <img src={project.img} />
               <span>{project.name}</span>
             </S.WorkItem>
@@ -177,7 +177,7 @@ export default () => (
     </S.FavContainer>
 
     <S.Footer>
-      <a href="https://github.com/okichan">{svgs.github}</a>
+      <a href="https://github.com/okichan" >{svgs.github}</a>
       <a href="https://www.linkedin.com/in/tomomi-oki-parsons/">{svgs.linkedin}</a>
       <p>
         &copy;{`${new Date().getFullYear()} `}
