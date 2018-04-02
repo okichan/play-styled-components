@@ -135,6 +135,8 @@ export const WorksContainer = styled.div`
   flex-wrap: wrap;
   justify-content: space-around;
   margin: 0 auto;
+  border: 1px solid red;
+  padding-bottom: 4rem;
 
   ${media.tablet`
     width: 80vw;
@@ -161,7 +163,7 @@ export const WorkItem = styled.a`
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(0.5) grayscale(100%) contrast(20%);
+    filter: brightness(0.6) grayscale(100%) contrast(20%);
     transition: all 0.5s;
   }
   
@@ -206,6 +208,11 @@ export const WorkItem = styled.a`
 
 export const WorkDesc = styled.p`
   font-family: "Poiret One";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  border: 1px solid lime;
 `;
 
 export const FavContainer = styled.div`

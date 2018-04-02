@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import Link from "gatsby-link";
 import "./App.css";
 import divider from "../assets/divider.png";
@@ -47,32 +47,44 @@ const projects = [
   {
     name: "Tanto",
     url: "https://mct-project-t3-demo.netlify.com",
-    img: tanto
+    img: tanto,
+    desc: "Sales management app for an existing shop in Melbourne. School group project.",
+    stack: "React / Node / Express / Mongo / Bootstrap",
   },
   {
     name: "Portfolio",
     url: "https://tomomioki.netlify.com",
-    img: port
+    img: port,
+    desc: "Sales management app for an existing shop in Melbourne. School group project.",
+    stack: "React / Node / Express / Mongo / Bootstrap",
   },
   {
     name: "Zodiac Redifined",
     url: "https://zodiac-redefined.netlify.com",
-    img: zodiac
+    img: zodiac,
+    desc: "Sales management app for an existing shop in Melbourne. School group project.",
+    stack: "React / Node / Express / Mongo / Bootstrap",
   },
   {
     name: "Wordsworth",
     url: "https://wordsworth.herokuapp.com",
-    img: wordsworth
+    img: wordsworth,
+    desc: "Sales management app for an existing shop in Melbourne. School group project.",
+    stack: "React / Node / Express / Mongo / Bootstrap",
   },
   {
     name: "My Cookbook",
     url: "https://radiant-beach-49950.herokuapp.com/",
-    img: mycookbook
+    img: mycookbook,
+    desc: "Sales management app for an existing shop in Melbourne. School group project.",
+    stack: "React / Node / Express / Mongo / Bootstrap",
   },
   {
     name: "Radiohead fansite",
     url: "https://secretary-answers-11183.netlify.com",
-    img: radiohead
+    img: radiohead,
+    desc: "Sales management app for an existing shop in Melbourne. School group project.",
+    stack: "React / Node / Express / Mongo / Bootstrap",
   }
 ];
 
@@ -120,19 +132,19 @@ export default () => (
 
           if (i === 0) {
             return (
-              <a href="cv" title="Get CV (word)">
+              <a href="cv" title="Get CV (word)" key="1">
                 {circle}
               </a>
             );
           } else if (i === 1) {
             return (
-              <a href="pdf" title="Get CV (pdf)">
+              <a href="pdf" title="Get CV (pdf)" key="2">
                 {circle}
               </a>
             );
           } else
             return (
-              <a href="https://github.com/okichan" title="Go to Github">
+              <a href="https://github.com/okichan" title="Go to Github" key="3">
                 {circle}
               </a>
             );
@@ -145,21 +157,21 @@ export default () => (
     <S.WorksContainer>
       {projects.map(project => {
         return (
-          <React.Fragment>
+          <Fragment>
             <S.WorkItem src={project.url} key={project.name}>
               <img src={project.img} />
               <span>{project.name}</span>
             </S.WorkItem>
-          </React.Fragment>
+            <S.WorkDesc>{project.desc}<br/>{project.stack}</S.WorkDesc>
+          </Fragment>
         );
       })}
     </S.WorksContainer>
-
     <S.Title>FAVOURITES</S.Title>
     <S.FavContainer>
       <ul>
         {favs.map(f => {
-          return <li>{f}</li>;
+          return <li key={f}>{f}</li>;
         })}
       </ul>
     </S.FavContainer>
