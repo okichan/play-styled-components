@@ -136,10 +136,15 @@ export const WorksContainer = styled.div`
   justify-content: space-around;
   margin: 0 auto;
   border: 1px solid red;
-  padding-bottom: 4rem;
-
+  padding-bottom: 80px;
+  
+  a:hover + p {
+    opacity: 1;
+  }
+  
   ${media.tablet`
-    width: 80vw;
+  width: 80vw;
+  padding-bottom: 50px;
   `};
 
   ${media.laptop`
@@ -149,6 +154,7 @@ export const WorksContainer = styled.div`
 
 export const WorkItem = styled.a`
   position: relative;
+  cursor: pointer;
   width: 35vw;
   height: 35vw;
   border: 1px solid #afc7b9;
@@ -182,7 +188,6 @@ export const WorkItem = styled.a`
   
   &:hover {
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-
         
     img {
       filter: none;
@@ -207,12 +212,15 @@ export const WorkItem = styled.a`
 `;
 
 export const WorkDesc = styled.p`
-  font-family: "Poiret One";
+  font-family: Cardo;
   position: absolute;
+  margin: 0;
   bottom: 0;
   width: 100%;
   text-align: center;
   border: 1px solid lime;
+  opacity: 0;
+  transition: opacity 0.5s;
 `;
 
 export const FavContainer = styled.div`

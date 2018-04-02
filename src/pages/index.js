@@ -55,14 +55,14 @@ const projects = [
     name: "Portfolio",
     url: "https://tomomioki.netlify.com",
     img: port,
-    desc: "Sales management app for an existing shop in Melbourne. School group project.",
-    stack: "React / Node / Express / Mongo / Bootstrap",
+    desc: "My portfolio web page. Re-purposed from school solo project.",
+    stack: "React / Node / SCSS / SVG",
   },
   {
     name: "Zodiac Redifined",
     url: "https://zodiac-redefined.netlify.com",
     img: zodiac,
-    desc: "Sales management app for an existing shop in Melbourne. School group project.",
+    desc: "A rather silly hobby page to practise REST API and CSS animation.",
     stack: "React / Node / Express / Mongo / Bootstrap",
   },
   {
