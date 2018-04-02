@@ -13,40 +13,68 @@ import radiohead from "../assets/radiohead.png";
 import { svgs } from "../assets/Svgs";
 
 const circles = [svgs.circle, svgs.circle, svgs.circle];
-const favs = ["React", 'Angular (2+)', 'CSS', 'SASS', 'JavaScript', 'Mongo', 'Figma', 'GitHub', 'Jira', 'SVG', 'Netlify', 'Bootstrap', 'VSCode', 'Yarn', 'Refactoring', 'Typography', 'Karaoke', 'Bike Share', 'Vintage', 'Tea', 'Sushi', 'Xiaolongbao', 'Curry', 'Singapore', 'Chicago', 'Madrid', '80s music', '90s too'
-]
+const favs = [
+  "React",
+  "Angular (2+)",
+  "CSS",
+  "SASS",
+  "JavaScript",
+  "Mongo",
+  "Figma",
+  "GitHub",
+  "Jira",
+  "SVG",
+  "Netlify",
+  "Bootstrap",
+  "VSCode",
+  "Yarn",
+  "Refactoring",
+  "Typography",
+  "Karaoke",
+  "Bike Share",
+  "Vintage",
+  "Tea",
+  "Sushi",
+  "Xiaolongbao",
+  "Curry",
+  "Singapore",
+  "Chicago",
+  "Madrid",
+  "80s music",
+  "90s too"
+];
 const projects = [
   {
-  name: 'Tanto', 
-  url: "https://mct-project-t3-demo.netlify.com",
-  img: tanto
-}, 
+    name: "Tanto",
+    url: "https://mct-project-t3-demo.netlify.com",
+    img: tanto
+  },
   {
-  name: 'Portfolio', 
-  url: "https://tomomioki.netlify.com",
-  img: port
-},
+    name: "Portfolio",
+    url: "https://tomomioki.netlify.com",
+    img: port
+  },
   {
-  name: 'Zodiac Redifined', 
-  url: "https://zodiac-redefined.netlify.com",
-  img: zodiac
-},
+    name: "Zodiac Redifined",
+    url: "https://zodiac-redefined.netlify.com",
+    img: zodiac
+  },
   {
-  name: 'Wordsworth', 
-  url: "https://wordsworth.herokuapp.com",
-  img: wordsworth
-},
+    name: "Wordsworth",
+    url: "https://wordsworth.herokuapp.com",
+    img: wordsworth
+  },
   {
-  name: 'My Cookbook', 
-  url: "https://radiant-beach-49950.herokuapp.com/",
-  img: mycookbook
-},
+    name: "My Cookbook",
+    url: "https://radiant-beach-49950.herokuapp.com/",
+    img: mycookbook
+  },
   {
-  name: 'Radiohead fansite', 
-  url: "https://secretary-answers-11183.netlify.com",
-  img: radiohead
-},
-]
+    name: "Radiohead fansite",
+    url: "https://secretary-answers-11183.netlify.com",
+    img: radiohead
+  }
+];
 
 export default () => (
   <S.Container>
@@ -112,43 +140,39 @@ export default () => (
       </S.CircleWrapper>
     </S.Greeting>
 
-
     <S.Title>WORKS</S.Title>
 
     <S.WorksContainer>
-        {projects.map(project => {
-          return (
-          <S.WorkItem src={project.url} key={project.name}>
-            <img src={project.img} /><span>{ project.name }</span>
-          </S.WorkItem>
-          )
-        })}
+      {projects.map(project => {
+        return (
+          <React.Fragment>
+            <S.WorkItem src={project.url} key={project.name}>
+              <img src={project.img} />
+              <span>{project.name}</span>
+            </S.WorkItem>
+          </React.Fragment>
+        );
+      })}
     </S.WorksContainer>
 
     <S.Title>FAVOURITES</S.Title>
-      <S.FavContainer>
-        <ul>
-          {favs.map(f => {
-            return (
-              <li>{f}</li>
-            )
-          })}
-        </ul>
-        </S.FavContainer>    
+    <S.FavContainer>
+      <ul>
+        {favs.map(f => {
+          return <li>{f}</li>;
+        })}
+      </ul>
+    </S.FavContainer>
 
     <S.Footer>
-      <a href="https://github.com/okichan" >
-        {svgs.github}
-      </a>
-      <a href="https://www.linkedin.com/in/tomomi-oki-parsons/" >
-        {svgs.linkedin}
-      </a>
+      <a href="https://github.com/okichan">{svgs.github}</a>
+      <a href="https://www.linkedin.com/in/tomomi-oki-parsons/">{svgs.linkedin}</a>
       <p>
         &copy;{`${new Date().getFullYear()} `}
-        Tomomi Oki, 
-        coded with
+        Tomomi Oki, coded with
         <S.Love />
-        , <a href="https://reactjs.org/" >React</a>, <a href="https://www.gatsbyjs.org/">Gatsby</a> and <a href="https://www.styled-components.com/">Styled Components</a>.
+        , <a href="https://reactjs.org/">React</a>, <a href="https://www.gatsbyjs.org/">Gatsby</a> and{" "}
+        <a href="https://www.styled-components.com/">Styled Components</a>.
       </p>
     </S.Footer>
   </S.Container>
