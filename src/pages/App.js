@@ -72,7 +72,7 @@ class App extends React.Component {
         url: "https://wordsworth.herokuapp.com",
         img: wordsworth,
         desc: "An Airtasker-like translation portal. School solo project.",
-        stack: "Ruby on Rails / Bootstrap / AWS"
+        stack: "Ruby on Rails / PostgreSQL / Bootstrap / AWS"
       },
       {
         name: "My Cookbook",
@@ -94,8 +94,11 @@ class App extends React.Component {
   componentDidMount() {
     const isBrowser = typeof window !== 'undefined';
     const AOS = isBrowser ? require('aos') : undefined;
-
     AOS.init();
+
+    document.getElementsByTagName("svg")[1].setAttribute("id", "circle1");
+    document.getElementsByTagName("svg")[2].setAttribute("id", "circle2");
+    document.getElementsByTagName("svg")[3].setAttribute("id", "circle3");
   }
 
   componentDidUpdate() {
@@ -157,27 +160,21 @@ class App extends React.Component {
 
           <S.CircleWrapper data-aos="fade" data-aos-duration="1000" data-aos-delay="3000" data-aos-anchor=".hello">
             {circles.map((circle, i) => {
-              setTimeout(() => {
-                document.getElementsByTagName("svg")[1].setAttribute("id", "circle1");
-                document.getElementsByTagName("svg")[2].setAttribute("id", "circle2");
-                document.getElementsByTagName("svg")[3].setAttribute("id", "circle3");
-              }, 700);
-
               if (i === 0) {
                 return (
-                  <a href="cv" title="Get CV (word)" key="1">
+                  <a href="https://github.com/okichan/portfolio-upgraded/raw/master/public/Tomomi_Oki_resume.docx" title="Get resume (word)" key="1">
                     {circle}
                   </a>
                 );
               } else if (i === 1) {
                 return (
-                  <a href="pdf" title="Get CV (pdf)" key="2">
+                  <a href="https://github.com/okichan/portfolio-upgraded/raw/master/public/Tomomi_Oki_resume.pdf" title="Get resume (pdf)" key="2">
                     {circle}
                   </a>
                 );
               } else
                 return (
-                  <a href="https://github.com/okichan" title="Go to Github" key="3">
+                  <a href="https://github.com/okichan" title="Go to Github" key="3" target="_blank">
                     {circle}
                   </a>
                 );
