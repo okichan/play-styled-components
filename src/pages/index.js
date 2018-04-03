@@ -1,9 +1,10 @@
-import React, { Fragment } from "react";
+import React, { Component, Fragment } from "react";
 import Link from "gatsby-link";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "./App.css";
 import divider from "../assets/divider.png";
 import * as S from "../assets/styles";
-import Typography from "typography";
 import tanto from "../assets/tanto.png";
 import port from "../assets/port.png";
 import zodiac from "../assets/zodiac.png";
@@ -12,6 +13,7 @@ import mycookbook from "../assets/mycookbook.png";
 import radiohead from "../assets/radiohead.png";
 import { svgs } from "../assets/Svgs";
 
+AOS.init();
 const circles = [svgs.circle, svgs.circle, svgs.circle];
 const favs = [
   "React",
@@ -49,42 +51,42 @@ const projects = [
     url: "https://mct-project-t3-demo.netlify.com",
     img: tanto,
     desc: "Sales management app for an existing shop in Melbourne. School group project.",
-    stack: "React / Node / Express / Mongo / API / Bootstrap",
+    stack: "React / Node / Express / Mongo / API / Bootstrap"
   },
   {
     name: "Portfolio",
     url: "https://tomomioki.netlify.com",
     img: port,
     desc: "My old portfolio. School solo project.",
-    stack: "React / Node / SCSS / SVG",
+    stack: "React / Node / SCSS / SVG"
   },
   {
     name: "Zodiac Redifined",
     url: "https://zodiac-redefined.netlify.com",
     img: zodiac,
     desc: "Toy app that tells your personality by entering your birth year.",
-    stack: "React / Node / Express / Rest API / SCSS",
+    stack: "React / Node / Express / Rest API / SCSS"
   },
   {
     name: "Wordsworth",
     url: "https://wordsworth.herokuapp.com",
     img: wordsworth,
     desc: "An Airtasker-like translation portal. School solo project.",
-    stack: "Ruby on Rails / Bootstrap",
+    stack: "Ruby on Rails / Bootstrap / AWS"
   },
   {
     name: "My Cookbook",
     url: "https://radiant-beach-49950.herokuapp.com/",
     img: mycookbook,
     desc: "Hackathon group project (to log in enter test@test.com pw: 123123).",
-    stack: "Ruby on Rails / Bootstrap",
+    stack: "Ruby on Rails / Bootstrap"
   },
   {
     name: "Radiohead fansite",
     url: "https://secretary-answers-11183.netlify.com",
     img: radiohead,
     desc: "Sales management app for an existing shop in Melbourne. School group project.",
-    stack: "HTML / CSS",
+    stack: "HTML / CSS"
   }
 ];
 
@@ -92,17 +94,27 @@ export default () => (
   <S.Container>
     <S.Top>
       <div className="center">
-        <svg viewBox="0 0 500 500" preserveAspectRatio="xMidYMin slice">
-          <path id="curve" fill="transparent" d="M73.2,148.6c4-6.1,65.5-96.8,178.6-95.6c111.3,1.2,170.8,90.3,175.1,97" />
-          <text>
-            <textPath xlinkHref="#curve">&nbsp;&nbsp;&nbsp;TOMOMI</textPath>
-          </text>
-        </svg>
-        <S.Oki>Oki</S.Oki>
-        <S.SubTitle>web developer</S.SubTitle>
-        <figure>
-          <S.Divider src={divider} />
-        </figure>
+        <div data-aos="fade" data-aos-delay="500" data-aos-duration="3000">
+          <svg viewBox="0 0 500 500" preserveAspectRatio="xMidYMin slice">
+            <path id="curve" fill="transparent" d="M73.2,148.6c4-6.1,65.5-96.8,178.6-95.6c111.3,1.2,170.8,90.3,175.1,97" />
+            <text textLength="336">
+              <textPath xlinkHref="#curve">&nbsp;&nbsp;&nbsp;TOMOMI</textPath>
+            </text>
+          </svg>
+        </div>
+
+        <S.Oki>
+          <div data-aos="fade" data-aos-delay="1800" data-aos-duration="3000" data-aos-anchor=".center">
+            Oki
+          </div>
+        </S.Oki>
+
+        <div data-aos="fade" data-aos-delay="3000" data-aos-duration="3000"  data-aos-anchor=".center">
+          <S.SubTitle>web developer</S.SubTitle>
+          <figure>
+            <S.Divider src={divider} />
+          </figure>
+        </div>
       </div>
     </S.Top>
 
@@ -162,7 +174,11 @@ export default () => (
               <img src={project.img} />
               <span>{project.name}</span>
             </S.WorkItem>
-            <S.WorkDesc>{project.desc}<br/>{project.stack}</S.WorkDesc>
+            <S.WorkDesc>
+              {project.desc}
+              <br />
+              {project.stack}
+            </S.WorkDesc>
           </Fragment>
         );
       })}
@@ -177,7 +193,7 @@ export default () => (
     </S.FavContainer>
 
     <S.Footer>
-      <a href="https://github.com/okichan" >{svgs.github}</a>
+      <a href="https://github.com/okichan">{svgs.github}</a>
       <a href="https://www.linkedin.com/in/tomomi-oki-parsons/">{svgs.linkedin}</a>
       <p>
         &copy;{`${new Date().getFullYear()} `}
