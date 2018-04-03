@@ -229,7 +229,7 @@ export const WorkDesc = styled.p`
 `;
 
 export const FavContainer = styled.div`
-  font-family: Cardo, sans-serif;
+  font-family: Cardo, serif;
   font-size: 1.2rem;
   margin: 0 auto 2rem;
   box-sizing: border-box;
