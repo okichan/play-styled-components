@@ -119,36 +119,16 @@ export default () => (
     </S.Top>
 
     <S.Greeting>
-      <p
-        className="bold hello"
-        data-aos="fade"
-        data-aos-once="true"
-        data-aos-duration="2000"
-        data-aos-anchor-placement="top-center"
-      >
+      <p className="bold hello" data-aos="fade" data-aos-duration="2000" data-aos-anchor-placement="top-center">
         Hello there.
       </p>
 
-      <p
-        className="p-1"
-        data-aos="fade"
-        data-aos-once="true"
-        data-aos-duration="2000"
-        data-aos-delay="1500"
-        data-aos-anchor=".hello"
-      >
+      <p className="p-1" data-aos="fade" data-aos-duration="2000" data-aos-delay="1500" data-aos-anchor=".hello">
         My name is Tomomi, an aspiring web developer who loves creating simple, elegant and eye-pleasing websites.<br />
         <br />
         In the recent past, I had been in a marketing research industry querying away SQL and dealing with Microsoft Excel.
       </p>
-      <p
-        className="p-2"
-        data-aos="fade"
-        data-aos-once="true"
-        data-aos-duration="2000"
-        data-aos-delay="1500"
-        data-aos-anchor=".hello"
-      >
+      <p className="p-2" data-aos="fade" data-aos-duration="2000" data-aos-delay="1500" data-aos-anchor=".hello">
         The world has evolved whilst I was v-looking up cells, so I decided to go back to school to learn new technologies, which
         turned out to be one of the best decisions I've ever made.
         <br />
@@ -157,13 +137,7 @@ export default () => (
         the quirky culture of Melbourne (north)!
       </p>
 
-      <S.CircleWrapper
-        data-aos="fade"
-        data-aos-once="true"
-        data-aos-duration="1000"
-        data-aos-delay="3000"
-        data-aos-anchor=".hello"
-      >
+      <S.CircleWrapper data-aos="fade" data-aos-duration="1000" data-aos-delay="3000" data-aos-anchor=".hello">
         {circles.map((circle, i) => {
           setTimeout(() => {
             document.getElementsByTagName("svg")[1].setAttribute("id", "circle1");
@@ -208,7 +182,7 @@ export default () => (
               data-aos="fade-up"
               data-aos-duration="1000"
               data-aos-easing="ease-out-quart"
-              data-aos-anchor-placement="center-bottom"
+              data-aos-anchor="#trigger"
               data-aos-delay={(i + 1) * 400}
             >
               <img src={project.img} />
@@ -222,14 +196,21 @@ export default () => (
           </Fragment>
         );
       })}
+      <div id="trigger" />
     </S.WorksContainer>
 
-    <S.Title className="fav" data-aos="fade" data-aos-duration="2000" data-aos-anchor-placement="top-center">FAVOURITES</S.Title>
+    <S.Title className="fav" data-aos="fade" data-aos-duration="2000" data-aos-anchor-placement="top-center">
+      FAVOURITES
+    </S.Title>
 
     <S.FavContainer data-aos="fade" data-aos-duration="2000" data-aos-anchor=".fav">
       <ul>
         {favs.map((f, i) => {
-          return <li key={f} data-aos="fade-up" data-aos-duration="1500" data-aos-delay={1000} data-aos-anchor-placement="top-bottom">{f}</li>;
+          return (
+            <li key={f} data-aos="fade-up" data-aos-duration="1500" data-aos-delay={1000} data-aos-anchor-placement="top-bottom">
+              {f}
+            </li>
+          );
         })}
       </ul>
     </S.FavContainer>
