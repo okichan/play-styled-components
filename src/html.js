@@ -1,4 +1,5 @@
 import React from "react";
+import favicon from './assets/favicon.ico';
 
 let stylesStr;
 if (process.env.NODE_ENV === `production`) {
@@ -23,13 +24,13 @@ module.exports = class HTML extends React.Component {
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
           {this.props.headComponents}
           {css}
-          <link rel="shortcut icon" href="%PUBLIC_URL%/static/favicon.ico">
+          <link rel="shortcut icon" href={favicon} />
 
-          <meta name="description" content="Tomomi's Portfolio" />
+          <meta name="description" content="Tomomi’s Portfolio" />
           <meta name="author" content="Tomomi Oki" />
 
-          <meta property="og:description" content="Tomomi portfolio website. Built with React and other cool friends." />
-          <meta property="og:image" content="%PUBLIC_URL%/static/favicon.ico" />
+          <meta property="og:description" content="Tomomi’s portfolio website. Built with React and other cool friends." />
+          <meta property="og:image" content='https://github.com/okichan/play-styled-components/raw/master/src/assets/O.png' />
           <meta property="og:url" content="https://tomomioki.surge.sh/" />
 
           <title>Tomomi Oki | Portfolio</title>
